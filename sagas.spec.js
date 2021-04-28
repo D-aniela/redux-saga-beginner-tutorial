@@ -9,7 +9,7 @@ test('incrementAsync Saga test', (assert) => {
   assert.deepEqual(
     gen.next().value,
     call(delay, 1000),
-    'incremenetAsync Saga must call delay(1000)'
+    'incrementAsync Saga must call delay(1000)'
   )
 
   assert.deepEqual(
@@ -23,5 +23,6 @@ test('incrementAsync Saga test', (assert) => {
     { done: true, value: undefined },
     'incrementAsync Saga must be done'
   )
-  assert.end
+
+  assert.end()
 })
